@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserListComponent } from './shared/user-list/user-list.component';
-import { UserFormComponent } from './shared/user-form/user-form.component';
+import { ErrorComponent } from './shared/error/error.component';
+import { UrlShortenerMainComponent } from './shared/url-shortener-main/url-shortener-main.component';
 
 const routes: Routes = [
-  { path: 'users', component: UserListComponent },
-  { path: 'adduser', component: UserFormComponent }
+  { path: 'error', component: ErrorComponent },
+  { path: '', component: UrlShortenerMainComponent }
 ];
 
 @NgModule({

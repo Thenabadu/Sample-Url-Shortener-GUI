@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserListComponent } from './user-list.component';
+import { UrlShortenerMainComponent } from './url-shortener-main.component';
 
-describe('UserListComponent', () => {
-  let component: UserListComponent;
-  let fixture: ComponentFixture<UserListComponent>;
+describe('UrlShortenerMainComponent', () => {
+  let component: UrlShortenerMainComponent;
+  let fixture: ComponentFixture<UrlShortenerMainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserListComponent ]
+      declarations: [ UrlShortenerMainComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserListComponent);
+    fixture = TestBed.createComponent(UrlShortenerMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

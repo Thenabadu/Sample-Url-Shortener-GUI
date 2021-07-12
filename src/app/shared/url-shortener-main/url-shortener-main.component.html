@@ -1,0 +1,25 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #urlForm="ngForm">
+        <div class="form-group mb-2">
+          <input type="text" [(ngModel)]="urlValue" 
+            class="form-control form-control-custom" 
+            id="url" 
+            name="url" 
+            placeholder="Shorten your link"
+            required #url="ngModel" (input)="onSearchChange($event.target.value)"/>
+            <button *ngIf="isDisplaySubmitBtn" type="submit" [disabled]="!urlForm.form.valid" class="btn btn-info">Shorten</button>
+            <button *ngIf="!isDisplaySubmitBtn" type="button" class="btn btn-primary" (click)="copyMessage(url)">Copy</button>
+            <p></p>
+          <div *ngIf="!isUserInputlValidUrl" class="alert alert-danger">{{errorMessage}}</div>
+        </div>
+      </form>
+      <div> 
+        <ul class="list-group" #urlListContainer>
+          <div *ngIf="!isDisplaySubmitBtn">
+            <app-generated-url [urlResponseMessage]="currentItem"></app-generated-url>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
